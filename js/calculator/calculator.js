@@ -26,8 +26,8 @@ function calculateResult() {
     const calculatedResult = eval(result);
     result = calculatedResult.toString();
     updateScreen();
-    showResultBox(result); // Display the result in a new div box
-    saveResultToLocalStorage(result); // Save the updated result
+    showResultBox(result); 
+    saveResultToLocalStorage(result); 
   } catch (error) {
     console.log('Error: Invalid Expression');
     resultScreen.textContent = 'Error';
