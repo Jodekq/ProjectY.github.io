@@ -90,7 +90,7 @@ function convertlength() {
     }
   }
 
-  document.getElementById("length-result").innerHTML = result.toFixed(2) + " " + toUnit;
+  document.getElementById("length-result").innerHTML = result.toFixed(3) + " " + toUnit;
 }
 
 

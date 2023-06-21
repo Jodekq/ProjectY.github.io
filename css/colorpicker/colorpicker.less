@@ -2,40 +2,48 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+  
     .color-preview {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
     }
-
+  
     .color-scheme-selector {
-        width: 200px;
-        height: 20px;
-        background: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red);
-        position: relative;
-
-        .selector-dot {
-            width: 10px;
-            height: 30px;
-            background: white;
-            position: absolute;
-            top: -5px;
-            left: 0;
-            transform: translateX(-50%);
-        }
+      position: relative;
+      width: 400px;
+      height: 200px;
+      border: 1px solid black;
+      margin: 10px 0;
+      cursor: pointer;
     }
-
+  
+    .selector-dot {
+      width: 20px;
+      height: 20px;
+      background: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+  
     .spectrum-slider {
-        width: 200px;
-        margin-top: 10px;
+      width: 200px;
+      margin-top: 10px;
     }
-
+  
     .hex-code-display {
-        width: 100px;
-        margin-top: 10px;
+      width: 100px;
+      margin-top: 10px;
     }
   }
+
+  
+  
+  
   
 
   

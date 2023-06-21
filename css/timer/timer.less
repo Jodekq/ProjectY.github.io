@@ -16,6 +16,23 @@
         height: fit-content;
     }
 
+    .button-wrapper-timer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .bx {
+            font-size: 30px;
+        }
+
+        .bxs-right-arrow {
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+        }
+    }
+
     .set-timer {
         display: flex;
         flex-direction: row;
@@ -51,17 +68,6 @@
     // .wake-sound {
 
     // }
-
-    .timer-button {
-        width: 150px;
-        border: 3px solid var(--color-button);
-        border-radius: 5px;
-        background-color: var(--background-color-bg);
-        padding: 8px;
-        color: var(--font-color-hl);
-        cursor: pointer;
-        font-size: 20px;
-    }
 }
 
 
@@ -77,6 +83,10 @@
     gap: 20px;
 
     .circle-timer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 200px;
 
         .circle-timer-svg {
@@ -89,7 +99,7 @@
             stroke: var(--color-button);
 
             path {
-                transition: all 1s linear;
+                transition: all 500ms linear;
 
                 stroke-dasharray: var(--length);
                 stroke-dashoffset: calc(var(--length) / var(--base) * (var(--base) - var(--steps)) * var(--rotation));
@@ -98,18 +108,29 @@
                 transform: rotate(-90deg);
             }
         }
-    }
-    
-    .timer-value {
-        width: max-content;
-        font-size: 24px;
-        color: var(--font-color-hl);
-    }
 
-    .done-in {
-        width: max-content;
-        font-size: 24px;
-        color: var(--font-color-hl);
+        .done-in {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            .timer-value {
+                font-size: 24px;
+                color: var(--font-color-hl);
+            }
+
+            .timer-done-in {
+                display: flex;
+                color: var(--font-color-hl);
+                justify-content: center;
+                font-size: 20px;
+
+                .bx {
+                    cursor: auto;
+                }
+            }
+        }
     }
 }
     

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/ProjektYIcon1.ico">
-    <title>Project Y / Cooking</title>
+    <title>Project Y / Color Picker</title>
 
     <!-- icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -44,11 +44,10 @@
       <p class="wip">doesnt work properly - wip</p>
       <div class="color-picker">
         <div class="color-preview"></div>
-        <div class="color-scheme-selector">
-          <div class="selector-dot"></div>
-        </div>
+        <canvas class="color-scheme-selector" width="400" height="200"></canvas>
         <input type="range" min="0" max="360" value="0" class="spectrum-slider">
         <input type="text" class="hex-code-display">
+        <input type="color">
       </div>
     </section>
     <template src="./templates/footer.html"></template>

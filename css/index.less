@@ -22,10 +22,11 @@
 // bx icon ---------------------------------------------- bx icon
 
 .bx {
-    display: block;
+    display: flex;
+    justify-content: center;
     color: white;
-    font-size: 30px;
     user-select: none;
+    cursor: pointer;
 }
 
 // lines -------------------------------------------- lines
@@ -86,10 +87,13 @@ button {
     padding: 5px;
     background-color: var(--color-button);
     color: var(--button-text-color);
-    width: min-content;
+    width: fit-content;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
 .button-style-2 { //small button
@@ -100,7 +104,6 @@ button {
     width: fit-content;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
 }
 
 // dropdown menu --------------------------------------- dropdown menu
@@ -108,7 +111,7 @@ button {
 .dropdown-style-1 {
     border: none;
     padding: 3px 3px;
-    background-color: var(--color-button);
+    background-color: inherit;
     color: var(--button-text-color);
     cursor: pointer;
     width: fit-content;
@@ -118,10 +121,11 @@ button {
     letter-spacing: 2px;
     font-family: var(--font-family-1);
     font-size: 16px;
+
 }
 
 .dropdown-style-2 { // dropdown border transparent
-    background-color: var(--background-color-bg);
+    background-color: inherit;
     color: var(--font-color-hl);
     border: none;
     width: min-content;
@@ -129,14 +133,19 @@ button {
     font-size: 16px;
     cursor: pointer;
     letter-spacing: 2px;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }
 
 // input field ------------------------------ input field
 
 .input-stlye-1 {
-    background-color: var(--background-color-bg);
+    background-color: inherit;
     color: var(--font-color-hl);
-    border: 2px solid var(--font-color-hl);
+    border: 2px solid var(--header-sidebar-color-bg);
     border-radius: 5px;
     padding: 5px;
     width: fit-content;
@@ -168,7 +177,7 @@ button {
     gap: 15px;
     font-weight: 400;
     padding-top: 25px;
-    padding-right: 10px;
+    padding-right: 35px;
     width: fit-content;
 
     @media screen and (max-width: 460px) {
@@ -214,6 +223,7 @@ body {
         gap: 20px;
         margin-top: 10px;
         user-select: none;
+        padding-left: 5px;
     } 
 
     .title {
@@ -244,6 +254,8 @@ body {
         }
     }
 
+    //discord button ---------------------------------------------- discord button
+
     .discord-button {
         flex-grow: 7;
         padding-right: 15px;
@@ -259,6 +271,7 @@ body {
         }
     }
 
+    //theme button ------------------------------------------- theme button
 
     .theme-button {
         background: transparent;
@@ -278,7 +291,7 @@ body {
         display: flex;
         margin-bottom: 100px;
 
-        //sidebar ------------------------------------------- sidebar
+        // sidebar ------------------------------------------- sidebar
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -419,3 +432,44 @@ body {
 
     }
 }
+
+//sidebar advanced ---------------------------- sidebar advanced
+
+// .sidebar-advanced {
+//     height: 100%;
+//     width: max-content;
+//     padding: 10px 5px 5px 5px;
+//     margin-left: 10px;
+//     background-color: var(--header-sidebar-color-bg);
+//     border-radius: 0px 0px 5px 5px;
+//     display: grid;
+//     grid-template-columns: 120px 120px;
+//     gap: 5px;
+
+
+//     .card {
+//         padding: 5px;
+//         height: 120px;
+//         width: 120px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+//         justify-content: center;
+//         background-color: var(--header-sidebar-color-bg);
+//         border: 2px solid var(--background-color-bg);
+//         border-radius: 5px;
+
+//         .sidebar-icons {
+
+//             .bx {
+//                 font-size: 50px;
+//             }
+//         }
+
+//         span {
+//             color: var(--font-color-hl);
+//         }
+//     }
+
+// }

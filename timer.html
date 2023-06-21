@@ -210,19 +210,25 @@
         <div class="wake-sound">
 
         </div> -->
-        <button class="timer-button" onclick="startTimer()">Start Timer</button>
-        <button class="timer-button" onclick="stopTimer()">Stop Timer</button>
-        <button class="timer-button" onclick="pauseTimer()">Pause Timer</button>
-        <button class="timer-button" onclick="restartTimer()">Restart Timer</button>
+        <div class="button-wrapper-timer">
+            <button class="button-style-1" onclick="startTimer()"><i class='bx bxs-right-arrow'></i></button>
+            <button class="button-style-1" onclick="stopTimer()"><i class='bx bx-stop' style='color:#ffffff' ></i></button>
+            <button class="button-style-1" onclick="pauseTimer()"><i class='bx bx-pause' style='color:#ffffff' ></i></button>
+        </div>
       </section>
       <section class="progress-bar">
         <div class="circle-timer">
             <svg class="circle-timer-svg" stroke-dasharray="283" id="circle-timer-svg" width="100%" height="100%" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="M496,256C496,388.46 388.46,496 256,496C123.54,496 16,388.46 16,256C16,123.54 123.54,16 256,16C388.46,16 496,123.54 496,256Z" style="fill:none;"/>
             </svg>
+            <div class="done-in">
+                <div class="timer-value">00:00:00</div>
+                <div class="timer-done-in">
+                    <i class='bx bx-alarm'></i>
+                    <span id="expiration-time"></span>
+                </div>
+            </div>
         </div>
-        <div class="timer-value">00:00:00</div>
-        <div class="done-in"><i class='bx bx-alarm'></i> <span id="expiration-time"></span></div>
       </section>
     </section>
     <template src="./templates/footer.html"></template>

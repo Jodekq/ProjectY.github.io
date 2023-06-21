@@ -32,6 +32,7 @@ function startTimer() {
   totalTime = (hours * 3600 + minutes * 60 + seconds) * 1000;
   timeLeft = totalTime;
 
+
   clearInterval(timerInterval);
   timerInterval = setInterval(updateTimer, 10);
 }
@@ -39,17 +40,18 @@ function startTimer() {
 function updateTimer() {
 
     timeLeft -= 10;
+    
+    setCircle(totalTime, 1, timeLeft - (timeLeft % 1000) );
   
     if (timeLeft <= 0) {
         clearInterval(timerInterval);
         timeLeft = 0;
+        setCircle(1, 1, 1)
     }
-  
+
     const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
     const seconds = Math.floor((timeLeft / 1000) % 60);
-
-    setCircle(60, 1, 60);
   
     const timerValue = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     const timerTitle = `${timerValue} - Timer`;
