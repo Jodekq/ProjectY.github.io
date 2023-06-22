@@ -1,69 +1,63 @@
 .generator-page {
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
-    color: var(--font-color-pg);
-    width: 100%;
-    gap: 60px;
-
-    @media screen and (max-width: 1300px) {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .vertical-line,
-    .big-vertical-line {
-        @media screen and (max-width: 1300px) {
-            display: none;
-        }
-    }
-
-    .big-horizontal-line {
-        @media screen and (min-width: 1300px) {
-            display: none;
-        }
-    }
-
-    .generator {
+    
+    .generator-page-content {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--font-color-hl);
-        background-color: var(--background-color-bg);
-        padding-top: 40px;
-        padding-bottom: 40px;
+        flex-wrap: wrap; 
+        justify-content: center;
+        color: var(--font-color-pg);
+        letter-spacing: 2px;
         gap: 30px;
-
-        .specific-generator {
+        width: 100%;
+    
+    
+        .generator {
             display: flex;
             align-items: center;
-            justify-content: center;
             flex-direction: column;
-            gap: 20px;
-
-            .qrcode-wrapper {
-                width: 150px;
-                height: 150px;
-                border: 1px solid var(--font-color-hl);
-                border-radius: 5px;
-                padding: 10px 0px 0px 10px;
-            }
-
-            .specific-generator-content {
+            color: var(--font-color-hl);
+            background-color: var(--darker-bg);
+            gap: 15px;
+            padding: 40px 10px 40px 10px;
+            border: 2px solid var(--header-sidebar-color-bg);
+            border-radius: 5px;
+            margin: 15px;
+            width: fit-content;
+            min-width: 290px;
+    
+            .specific-generator {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                flex-direction: row;
-                gap: 10px;
-
-                @media screen and (max-width: 700px) {
-                    flex-direction: column;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+    
+                .qrcode-wrapper {
+                    width: 150px;
+                    height: 150px;
+                    border: 1px solid var(--font-color-hl);
+                    border-radius: 5px;
+                    padding: 10px 0px 0px 10px;
                 }
+    
+                .specific-generator-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 10px;
+    
+                    @media screen and (max-width: 700px) {
+                        flex-direction: column;
+                    }
+                }
+    
             }
-
+    
         }
-
     }
 }
+
+

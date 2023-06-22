@@ -24,7 +24,6 @@
 .bx {
     display: flex;
     justify-content: center;
-    color: white;
     user-select: none;
     cursor: pointer;
 }
@@ -69,17 +68,26 @@
 
 a:visited {
     text-decoration: none;
-    color: var(--general-text-cl);
+    color: var(--white-text-cl);
 }
 
 .header-mainpage-link{
     cursor: pointer;
 }
 
+.p-tab-1 {
+    padding: 15px 0px 0px 30px;
+}
+
+.p-tab-2 {
+    padding: 5px 0px 0px 60px;
+}
+
 // button --------------------------------------------- button
 
 button {
     font-family: var(--font-family-1);
+    cursor: pointer;
 }
 
 .button-style-1 {
@@ -168,37 +176,26 @@ button {
     }
 }
 
-// sidebar right --------------------------------- sidebar right
-
-.sidebar-right {
+.top-sidebar {
+    width: 90%;
+    height: fit-content;
+    margin: 12px 24px 12px 24px;
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    gap: 15px;
-    font-weight: 400;
-    padding-top: 25px;
-    padding-right: 35px;
-    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    color: var(--font-color-hl);
 
-    @media screen and (max-width: 460px) {
-        gap: 20px;
-    }
-
-    .bx {
-        font-size: 23px;
-        color: var(--font-color-hl);
-    }
-
-    a {
-        color: var(--font-color-hl);
-
-    }
-
-    span {
-
-        @media screen and (max-width: 460px) {
-            display: none;
-        }
+    .top-sidebar-item {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 4px 10px 4px 10px;
+        background-color: var(--darker-bg);
+        border-radius: 5px;
     }
 }
 
@@ -229,7 +226,7 @@ body {
     .title {
         flex-grow: 70;
         text-align: left;
-        color: var(--general-text-cl);
+        color: var(--white-text-cl);
         padding-left: 15px;
 
         @media screen and (max-width: 800px) {
@@ -260,6 +257,7 @@ body {
         flex-grow: 7;
         padding-right: 15px;
         font-size: 30px;
+        text-decoration: none;
 
         .bx .bxl-discord-alt {
             width: 36px;
@@ -280,6 +278,7 @@ body {
         cursor: pointer;
         flex-grow: 1;
         font-size: 30px;
+        color: white;
 
         @media screen and (max-width: 635px) {
             font-size: 25px;
@@ -291,6 +290,16 @@ body {
         display: flex;
         margin-bottom: 100px;
 
+        .page-content {
+
+            .bx {
+                display: flex;
+                justify-content: left;
+                font-size: 30px;
+                color: var(--font-color-hl);
+            }
+        }
+
         // sidebar ------------------------------------------- sidebar
         .sidebar {
             display: flex;
@@ -300,6 +309,8 @@ body {
             gap: 15px;
             width: 10%;
             user-select: none;
+            color: white;
+
         
             .sidebar-icons {
                 background-color: var(--header-sidebar-color-bg);
@@ -327,7 +338,7 @@ body {
                 .extend-sidebar {
                     display: flex;
                     flex-direction: row;
-                    color: var(--general-text-cl);
+                    color: var(--white-text-cl);
                     align-items: center;
                     gap: 5px;
                     padding-left: 20px;

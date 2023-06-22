@@ -1,0 +1,63 @@
+.games-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    user-select: none;
+
+    .games-content {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        color: var(--font-color-pg);
+        letter-spacing: 2px;
+        gap: 30px;
+    
+        .tictactoe-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .playerX {
+                color: #09C372;
+            }
+            
+            .playerO {
+                color: #498AFB;
+            }
+
+            .tictactoe-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 10px;
+
+                .tile {
+                    width: 100px;
+                    height: 100px;
+                    background-color: var(--darker-bg);
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 50px;
+
+                    &:hover {
+                        background-color: var(--header-sidebar-color-bg);
+                    }
+                }
+            }
+
+            h1 {
+                color: var(--font-color-hl);
+                font-size: 16px;
+            }
+
+            .control {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}

@@ -41,144 +41,146 @@
     <section class="page">
       <!--  sidebar -------------------------------------sidebar -->
       <template src="./templates/sidebar.html"></template>
-      <!-- Unit Converter Section -->
-      <section class="unit-converter-section">
-        <!-- Length Converter -->
-        <div id="length-converter" class="converter">
-            <h1>Length Converter</h1>
-            <input type="number" class="input-stlye-1" id="inputValue-length" placeholder="Value">
+      <section class="unit-converter-page">
+        <aside class="top-sidebar">
+          <div class="top-sidebar-item">
+            <a href="#length-converter"><span>Length</span> <i class='bx bx-ruler'></i></a>
+          </div>
+          <div class="top-sidebar-item">
+            <a href="#temperature-converter"> <span>Temperature</span>  <i class='bx bxs-thermometer'></i></a>
+          </div>
+          <div class="top-sidebar-item">
+            <a href="#weight-converter"> <span>Weight</span>  <i class='bx bx-dumbbell'></i></a>
+          </div>
+          <div class="top-sidebar-item">
+            <a href="#time-converter"> <span>Time</span>  <i class='bx bxs-time'></i></a>
+          </div>
+        </aside>
+        <section class="unit-converter-section">
+          <!-- Length Converter -->
+          <div id="length-converter" class="converter">
+              <h1>Length Converter</h1>
+              <input type="number" class="input-stlye-1" id="inputValue-length" placeholder="Value">
+              <div class="unit-dropdown-wrapper">
+                <p>From</p>
+                <select class="dropdown-style-2" id="fromUnit-length">
+                  <option value="km">Kilometers (km)</option>
+                  <option value="mi">Miles (mi)</option>
+                  <option value="m">Meter (m)</option>
+                  <option value="cm">Centimeter (cm)</option>
+                  <option value="in">Inch (in)</option>
+                  <option value="ft">Foot (ft)</option>
+                </select>
+              </div>
+              <div class="unit-dropdown-wrapper">
+                <p>To</p>
+                <select class="dropdown-style-2" id="toUnit-length">
+                  <option value="km">Kilometers (km)</option>
+                  <option value="mi">Miles (mi)</option>
+                  <option value="m">Meter (m)</option>
+                  <option value="cm">Centimeter (cm)</option>
+                  <option value="in">Inch (in)</option>
+                  <option value="ft">Foot (ft)</option>
+                </select>
+              </div>
+              <div class="button-style-1" onclick="convertlength()">Convert</div>
+              <div class="result">
+                <p>Result: <span id="length-result"></span></p>
+              </div>
+          </div>
+          <!-- Temperture Converter -->
+          <div id="temperature-converter" class="converter">
+              <h1>Temperature Converter</h1>
+              <input type="number" class="input-stlye-1" id="temperature-inputValue" placeholder="Value">
+              <div class="unit-dropdown-wrapper">
+                <p>From</p>
+                <select class="dropdown-style-2" id="temperature-fromUnit">
+                  <option value="celsius">Celsius (°C)</option>
+                  <option value="fahrenheit">Fahrenheit (°F)</option>
+                  <option value="kelvin">Kelvin (K)</option>
+                </select>
+              </div>
+              <div class="unit-dropdown-wrapper">
+                <p>To</p>
+                <select class="dropdown-style-2" id="temperature-toUnit">
+                  <option value="celsius">Celsius (°C)</option>
+                  <option value="fahrenheit">Fahrenheit (°F)</option>
+                  <option value="kelvin">Kelvin (K)</option>
+                </select>
+              </div>
+              <div class="button-style-1" onclick="converttemperature()">Convert</div>
+              <div class="result">
+                <p>Result: <span id="temperature-result"></span></p>
+              </div>
+          </div>
+          <div id="weight-converter" class="converter">
+            <h1>Weight Converter</h1>
+            <input type="number" class="input-stlye-1" id="weight-inputValue" placeholder="Value">           
+              <div class="unit-dropdown-wrapper">
+                <p>From</p>
+                <select class="dropdown-style-2" id="weight-fromUnit">
+                  <option value="kilogram">Kilogram (kg)</option>
+                  <option value="gram">Gram (g)</option>
+                  <option value="milligram">Milligram (mg)</option>
+                  <option value="ton">Ton (t)</option>
+                  <option value="pound">Pound (lb)</option>
+                  <option value="ounce">Ounce (oz)</option>
+                  <option value="stone">Stone (st)</option>
+                </select>
+              </div>
+              <div class="unit-dropdown-wrapper">
+                <p>To</p>
+                <select class="dropdown-style-2" id="weight-toUnit">
+                  <option value="kilogram">Kilogram (kg)</option>
+                  <option value="gram">Gram (g)</option>
+                  <option value="milligram">Milligram (mg)</option>
+                  <option value="ton">Ton (t)</option>
+                  <option value="pound">Pound (lb)</option>
+                  <option value="ounce">Ounce (oz)</option>
+                  <option value="stone">Stone (st)</option>
+                </select>
+              </div>
+              <div class="button-style-1" onclick="convertweight()">Convert</div>
+              <div class="result">
+                <p>Result: <span id="weight-result"></span></p>
+              </div>
+          </div>
+          <div id="time-converter" class="converter">
+            <h1>Time Converter</h1>
+            <input type="number" class="input-stlye-1" id="time-inputValue" placeholder="Value">
             <div class="unit-dropdown-wrapper">
               <p>From</p>
-              <select class="dropdown-style-2" id="fromUnit-length">
-                <option value="km">Kilometers (km)</option>
-                <option value="mi">Miles (mi)</option>
-                <option value="m">Meter (m)</option>
-                <option value="cm">Centimeter (cm)</option>
-                <option value="in">Inch (in)</option>
-                <option value="ft">Foot (ft)</option>
+              <select class="dropdown-style-2" id="time-fromUnit">
+                <option value="millisecond">Millicensonds (ms)</option>
+                <option value="second">Seconds (s)</option>
+                <option value="minute">Minutes (min)</option>
+                <option value="hour">Hour (h)</option>
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
               </select>
             </div>
             <div class="unit-dropdown-wrapper">
               <p>To</p>
-              <select class="dropdown-style-2" id="toUnit-length">
-                <option value="km">Kilometers (km)</option>
-                <option value="mi">Miles (mi)</option>
-                <option value="m">Meter (m)</option>
-                <option value="cm">Centimeter (cm)</option>
-                <option value="in">Inch (in)</option>
-                <option value="ft">Foot (ft)</option>
+              <select class="dropdown-style-2" id="time-toUnit">
+                <option value="millisecond">Millicensonds (ms)</option>
+                <option value="second">Seconds (s)</option>
+                <option value="minute">Minutes (min)</option>
+                <option value="hour">Hour (h)</option>
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
               </select>
             </div>
-            <div class="button-style-1" onclick="convertlength()">Convert</div>
+            <div class="button-style-1" onclick="convertTimeAndDisplay()">Convert</div>
             <div class="result">
-              <p>Result: <span id="length-result"></span></p>
+              <p>Result: <span id="time-result"></span></p>
             </div>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="horizontal-line"></div>
-        <!-- Temperture Converter -->
-        <div id="temperature-converter" class="converter">
-            <h1>Temperature Converter</h1>
-            <input type="number" class="input-stlye-1" id="temperature-inputValue" placeholder="Value">
-            <div class="unit-dropdown-wrapper">
-              <p>From</p>
-              <select class="dropdown-style-2" id="temperature-fromUnit">
-                <option value="celsius">Celsius (°C)</option>
-                <option value="fahrenheit">Fahrenheit (°F)</option>
-                <option value="kelvin">Kelvin (K)</option>
-              </select>
-            </div>
-            <div class="unit-dropdown-wrapper">
-              <p>To</p>
-              <select class="dropdown-style-2" id="temperature-toUnit">
-                <option value="celsius">Celsius (°C)</option>
-                <option value="fahrenheit">Fahrenheit (°F)</option>
-                <option value="kelvin">Kelvin (K)</option>
-              </select>
-            </div>
-            <div class="button-style-1" onclick="converttemperature()">Convert</div>
-            <div class="result">
-              <p>Result: <span id="temperature-result"></span></p>
-            </div>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="horizontal-line"></div>
-        <div id="weight-converter" class="converter">
-          <h1>Weight Converter</h1>
-          <input type="number" class="input-stlye-1" id="weight-inputValue" placeholder="Value">           
-            <div class="unit-dropdown-wrapper">
-              <p>From</p>
-              <select class="dropdown-style-2" id="weight-fromUnit">
-                <option value="kilogram">Kilogram (kg)</option>
-                <option value="gram">Gram (g)</option>
-                <option value="milligram">Milligram (mg)</option>
-                <option value="ton">Ton (t)</option>
-                <option value="pound">Pound (lb)</option>
-                <option value="ounce">Ounce (oz)</option>
-                <option value="stone">Stone (st)</option>
-              </select>
-            </div>
-            <div class="unit-dropdown-wrapper">
-              <p>To</p>
-              <select class="dropdown-style-2" id="weight-toUnit">
-                <option value="kilogram">Kilogram (kg)</option>
-                <option value="gram">Gram (g)</option>
-                <option value="milligram">Milligram (mg)</option>
-                <option value="ton">Ton (t)</option>
-                <option value="pound">Pound (lb)</option>
-                <option value="ounce">Ounce (oz)</option>
-                <option value="stone">Stone (st)</option>
-              </select>
-            </div>
-            <div class="button-style-1" onclick="convertweight()">Convert</div>
-            <div class="result">
-              <p>Result: <span id="weight-result"></span></p>
-            </div>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="horizontal-line"></div>
-        <div id="time-converter" class="converter">
-          <h1>Time Converter</h1>
-          <input type="number" class="input-stlye-1" id="time-inputValue" placeholder="Value">
-          <div class="unit-dropdown-wrapper">
-            <p>From</p>
-            <select class="dropdown-style-2" id="time-fromUnit">
-              <option value="millisecond">Millicensonds (ms)</option>
-              <option value="second">Seconds (s)</option>
-              <option value="minute">Minutes (min)</option>
-              <option value="hour">Hour (h)</option>
-              <option value="day">Day</option>
-              <option value="week">Week</option>
-              <option value="month">Month</option>
-              <option value="year">Year</option>
-            </select>
           </div>
-          <div class="unit-dropdown-wrapper">
-            <p>To</p>
-            <select class="dropdown-style-2" id="time-toUnit">
-              <option value="millisecond">Millicensonds (ms)</option>
-              <option value="second">Seconds (s)</option>
-              <option value="minute">Minutes (min)</option>
-              <option value="hour">Hour (h)</option>
-              <option value="day">Day</option>
-              <option value="week">Week</option>
-              <option value="month">Month</option>
-              <option value="year">Year</option>
-            </select>
-          </div>
-          <div class="button-style-1" onclick="convertTimeAndDisplay()">Convert</div>
-          <div class="result">
-            <p>Result: <span id="time-result"></span></p>
-          </div>
-        </div>
+        </section>
       </section>
-      <div class="sidebar-right">
-          <a href="#length-converter"><span>Length</span> <i class='bx bx-ruler'></i></a>
-          <a href="#temperature-converter"> <span>Temperature</span>  <i class='bx bxs-thermometer'></i></a>
-          <a href="#weight-converter"> <span>Weight</span>  <i class='bx bx-dumbbell'></i></a>
-          <a href="#time-converter"> <span>Time</span>  <i class='bx bxs-time'></i></a>
-          <!-- <a href="#currency-converter"> <span>Currency</span>  <i class='bx bxs-dollar-circle'></i></a> -->
-      </div>
     </section>
     <template src="./templates/footer.html"></template>
 </body>
