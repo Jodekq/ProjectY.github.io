@@ -1,63 +1,75 @@
-.games-page {
+#games-sidebar-id {
+    background-color: var(--hover-color);
+
+    &:hover {
+        background-color: var(--light-hover-color); 
+    }
+}
+
+.games-content {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    user-select: none;
+    flex-wrap: wrap; 
+    color: var(--font-color-pg);
+    letter-spacing: var(--letter-spacing-text);
+    gap: 30px;
+    font-family: var(--font-family-1);
 
-    .games-content {
-        display: flex;
-        flex-wrap: wrap; 
-        align-items: center;
-        color: var(--font-color-pg);
-        letter-spacing: 2px;
-        gap: 30px;
-    
-        .tictactoe-section {
-            display: flex;
-            flex-direction: column;
+    .tictactoe-section {
+        display: flex; 
+        flex-direction: column;
+        gap: 10px;
+
+        .playerX {
+            color: #09C372;
+        }
+        
+        .playerO {
+            color: #498AFB;
+        }
+
+        .tictactoe-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
             gap: 10px;
+            user-select: none;
 
-            .playerX {
-                color: #09C372;
-            }
-            
-            .playerO {
-                color: #498AFB;
-            }
+            .tile {
+                width: 100px;
+                height: 100px;
+                background-color: var(--light-background);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                border-radius: 10px;
 
-            .tictactoe-container {
-                display: grid;
-                grid-template-columns: auto auto auto;
-                gap: 10px;
-
-                .tile {
-                    width: 100px;
-                    height: 100px;
-                    background-color: var(--darker-bg);
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 50px;
-
-                    &:hover {
-                        background-color: var(--header-sidebar-color-bg);
-                    }
+                &:hover {
+                    background-color: var(--hover-color);
                 }
             }
+        }
 
-            h1 {
-                color: var(--font-color-hl);
-                font-size: 16px;
-            }
+        h1 {
+            font-size: var(--header-font-size);
+        }
 
-            .control {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
+        .control {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .change-link {
+            display: flex;
+            background-color: var(--light-background);
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            height: fit-content;
+            cursor: pointer;
         }
     }
 }
+

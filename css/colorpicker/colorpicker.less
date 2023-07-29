@@ -1,45 +1,81 @@
-.color-picker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    .color-preview {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 10px;
-    }
-  
-    .color-scheme-selector {
-      position: relative;
-      width: 400px;
-      height: 200px;
-      border: 1px solid black;
-      margin: 10px 0;
-      cursor: pointer;
-    }
-  
-    .selector-dot {
-      width: 20px;
-      height: 20px;
-      background: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-  
-    .spectrum-slider {
-      width: 200px;
-      margin-top: 10px;
-    }
-  
-    .hex-code-display {
-      width: 100px;
-      margin-top: 10px;
-    }
+#colorpicker-sidebar-id {
+  background-color: var(--hover-color);
+
+  &:hover {
+      background-color: var(--light-hover-color); 
   }
+} 
+
+.img-input {
+
+  output{
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  output .image{
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  output .image img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  output .image span {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+  }
+  
+  output .image span:hover {
+    opacity: 0.8;
+  }
+  
+  output .span--hidden{
+    visibility: hidden;
+  }
+}
+
+.color-picker {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  gap: 10px;
+
+  input[type="color"] {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+
+  .info {
+    background-color: var(--darker-bg);
+    padding: 5px;
+  }
+  
+}
+
+
+
 
   
   

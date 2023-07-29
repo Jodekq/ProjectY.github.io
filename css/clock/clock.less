@@ -1,0 +1,104 @@
+#clock-sidebar-id {
+    background-color: var(--hover-color);
+
+    &:hover {
+        background-color: var(--light-hover-color); 
+    }
+} 
+
+.button-wrapper-timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+    .bx {
+        font-size: 32px;
+    }
+}
+
+.set-timer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    .dropdown {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+.progress-bar {
+    width: 100px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .circle-timer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+
+        .circle-timer-svg {
+            --length: 1508.0234375;
+            --base: 60;
+            --rotation: -1;
+            --steps: 60;
+
+            stroke-width: 15px;
+            stroke: var(--line-color);
+
+            path {
+                transition: all 500ms linear;
+
+                stroke-dasharray: var(--length);
+                stroke-dashoffset: calc(var(--length) / var(--base) * (var(--base) - var(--steps)) * var(--rotation));
+                stroke-linecap: round;
+                transform-origin: center;
+                transform: rotate(-90deg);
+            }
+        }
+
+        .done-in {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            .timer-value {
+                font-size: 24px;
+                color: var(--font-color-hl);
+            }
+
+            .timer-done-in {
+                display: flex;
+                color: var(--font-color-hl);
+                justify-content: center;
+                font-size: 20px;
+
+                .bx {
+                    cursor: auto;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    font-size: var(--big-font-size);
+}
+
+
+

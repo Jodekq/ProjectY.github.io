@@ -1,5 +1,5 @@
 <!--  -->
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
     <!-- style -->
     <!-- <script src="assets/less.js" defer></script> -->
     <link rel="stylesheet/less" type="text/css" href="css/index.less"/>
-    <link rel="stylesheet/less" type="text/css" href="css/fonts.less"/>
 
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
@@ -26,24 +25,29 @@
     <link rel="stylesheet/less" type="text/css" href="css/games/games.less"/>
 </head>
 <body data-theme="dark">
-    <!-- header ----------------------------------------------- header -->
+    <!-- header -->
     <header class="main-header">
-        <h1 class="title"><a href="index.html">Project Y </a> <span>/ Games</span></h1>
-        <!-- toggle themes buttons -->
-        <button id="dark-theme-button" class="theme-button"><i class='bx bx-moon' ></i></button>
-        <button id="light-theme-button" class="theme-button"><i class='bx bx-sun'></i></button>
-        <button id="green-theme-button" class="theme-button"><i class='bx bxs-tree-alt' ></i></button>
-        <!-- discord button -->
-        <a class="discord-button" href="discordserver" target="_blank">
-          <i class='bx bxl-discord-alt'></i>
-        </a>
-    </header>
-    <section class="page">
-       <!-- sidebar -------------------------------------sidebar -->
-      <template src="./templates/sidebar.html"></template>
-      <section class="games-page">
-        <aside class="top-sidebar">
-            <div class="top-sidebar-item">
+        <div class="left-header">
+          <i onclick="menuChange()" id="menu-button" class='bx bx-menu'></i>
+          <h1 class="title"><a href="index.html">Project Y</a></h1>
+        </div>
+        <div class="right-header">
+          <i id="dark-theme-button" class='bx bx-moon'></i>
+          <i id="light-theme-button" class='bx bx-sun'></i>
+          <i id="green-theme-button" class='bx bxs-tree-alt' ></i>
+          <a class="discord-button" href="discordserver" target="_blank"><i class='bx bxl-discord-alt'></i></a>
+        </div>
+      </header>
+      <div class="horizontal-line"></div>
+      <section class="page">
+        <!-- sidebar -->
+        <section class="sidebar-section">
+          <template src="./templates/sidebar.html"></template>
+        </section>
+        <section class="page-content">
+          <!-- topbar -->
+          <aside class="topbar">
+            <div class="topbar-item">
               <a href="#tictactoe-section"><span>Tic Tac Toe</span><i class='bx bxs-grid'></i></a>
             </div>
         </aside>
@@ -70,6 +74,7 @@
                         <button class="button-style-1" id="reset">Reset</button>
                     </div>
                 </div>
+                <div class="change-link">Multiplayer</div>
             </section>
           </section>
       </section>

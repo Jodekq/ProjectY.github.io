@@ -41,18 +41,34 @@ function openWindowMiniWindow(url) {
   popup.location = url;
 }
 
-// const handleOnMouseMove = e => {
-//   const { currentTarget: target } = e;
+// clear local storage 
+function ClearLocalStorage() {
+  localStorage.clear();
+}
 
-//   const rect = target.getBoundingclientRect(),
-//         x = e.clientX - rect.left,
-//         y = e.clientY - rect.top
+//menu button 
 
-//   target.style.setProperty("--mouse-x", `${x}px`);
-//   target.style.setProperty("--mouse-y", `${y}px`)
-// }
+function menuChange() {
+  const sidebar = document.getElementById("sidebar");
+  const menubutton = document.getElementById("menu-button");
 
+  if (sidebar.classList.contains("sidebar-small")) {
+    sidebar.classList.remove("sidebar-small");
+    sidebar.classList.add("sidebar");
+    localStorage.setItem("selectedClass", "sidebar");
+  } else {
+    sidebar.classList.remove("sidebar");
+    sidebar.classList.add("sidebar-small");
+    localStorage.setItem("selectedClass", "sidebar-small");
+  }
+}
 
-// for(const card  of document.querySelectorAll(".card")) {
-//   card.onmousemove = e => handleOnMouseMove(e);
-// }
+window.addEventListener("load", function() {
+  const selectedClass = localStorage.getItem("selectedClass");
+  if (selectedClass) {
+    const sidebar = document.getElementById("sidebar");
+  }
+});
+
+//switch button
+

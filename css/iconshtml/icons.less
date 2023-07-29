@@ -1,0 +1,35 @@
+#icons-sidebar-id {
+    background-color: var(--hover-color);
+
+    &:hover {
+        background-color: var(--light-hover-color); 
+    }
+}
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    height: fit-content;
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--light-background);
+        width: 130px;
+        height: 150px;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+        transition: var(--transition-1);
+        border: 1.7px dashed var(--line-color);
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 8px 8px var(--hover-color);
+            transition: var(--transition-1);
+        }
+    }
+}
