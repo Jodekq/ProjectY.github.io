@@ -6,36 +6,6 @@
     }
 } 
 
-.button-wrapper-timer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-
-    .bx {
-        font-size: 32px;
-    }
-}
-
-.set-timer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-
-    .dropdown {
-        display: flex;
-        width: fit-content;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-
-
 .progress-bar {
     width: 100px;
     height: fit-content;
@@ -98,6 +68,49 @@
 
 h1 {
     font-size: var(--big-font-size);
+}
+
+.card-page-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .card-content {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+
+        .set-timer {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            .dropdown {
+                display: flex;
+                width: fit-content;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .button-wrapper-timer {
+            margin: 10px 0px 10px 0px;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            .bx {
+                font-size: 32px;
+            }
+        }
+    }
 }
 
 

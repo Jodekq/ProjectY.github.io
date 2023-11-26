@@ -1,7 +1,7 @@
 #generator-sidebar-id {
     background-color: var(--hover-color);
 
-    &:hover {
+    &:hover { 
         background-color: var(--light-hover-color); 
     }
 }
@@ -16,6 +16,39 @@
     justify-content: center;
 }
 
+
+.card-page-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .card-content {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        gap: 15px;
+
+        .dropdowns {
+
+
+            .dropdown {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                label {
+                    margin-right: 5px;
+                }
+            }
+        }
+        
+    }
+}
 
 
 
